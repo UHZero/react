@@ -19,8 +19,8 @@
 
 .Card .Content {
     flex-grow: 1;
-    background-color: rgba(19, 116, 78, 0.459);
-    color: chartreuse;
+    background-color: #fff;
+    color: #000;
     padding: 20px;
 
 }

@@ -1,6 +1,10 @@
 import './App.css'
 import React from "react";
 
+import IndiretaFilho from './comunication/IndiretaFilho';
+import IndiretaPai from './comunication/IndiretaPai';
+import UsuarioInfo from './condictional/UsuarioInfo';
+import ParImpar from './condictional/ParImpar';
 import Card from "./layout/Card";
 import Pai from "./basic/Pai_2"
 import Filho from "./basic/Filho"
@@ -12,6 +16,14 @@ export default _ =>
     <div className="App">
         <h1> Arrow _ </h1>
         <div className="Cards">
+            <Card title="Comunicação Indireta">
+            <   IndiretaPai></IndiretaPai>
+            </Card>
+            <Card title="Renderização Condicional">
+                <ParImpar number={3}></ParImpar>
+                <UsuarioInfo usuario={{ nome: 'Jão' }} />
+                <UsuarioInfo usuario={{ email: 'jao@email.com' }} />
+            </Card>
             <Card title="Desafio Tabela">
                 <TabelaProdutos></TabelaProdutos>
             </Card>
