@@ -17,7 +17,7 @@ export default _ =>
     <div className="App">
         <h1> Arrow _ </h1>
         <div className="Cards">
-            <Card title="Contador" color="#1abc9c">
+            <Card title="Contador" color="#16a085">
                 <Contador startNumber={10}></Contador>
                 <Contador startPass={5}></Contador>
             </Card>

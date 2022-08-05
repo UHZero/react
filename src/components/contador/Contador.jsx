@@ -1,4 +1,8 @@
+import "./Contador.css"
 import React, { Component } from "react";
+import Display from "./Display";
+import Buttons from "./Buttons";
+import PassForm from "./PassForm";
 
 class Contador extends Component {
     state = {
@@ -20,19 +24,15 @@ class Contador extends Component {
 
     dec = () => this.setState({ number: this.state.number - this.state.pass })
 
-    setPass = (e) => this.setState({ pass: +e.target.value })
+    setPass = (newPass) => this.setState({ pass: newPass })
 
     render() {
         return (
-            <div>
+            <div className="Contador">
                 <h2>Contador</h2>
-                <h3>{this.state.number}</h3>
-                <div>
-                    <label htmlFor="passInput">Pass: </label>
-                    <input type="number" value={this.state.pass} id="passInput" onChange={this.setPass} />
-                </div>
-                <button onClick={this.inc}> + </button>
-                <button onClick={this.dec}> - </button>
+                <Display number={this.state.number} />
+                <PassForm startPass={this.state.pass} changePass={this.setPass} />
+                <Buttons incrementar={this.inc} decrementar={this.dec} />
             </div>
         )
     }
