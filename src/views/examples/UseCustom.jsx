@@ -1,14 +1,24 @@
 import React from 'react'
 import PageTitle from '../../components/layout/PageTitle'
+import SectionTitle from '../../components/layout/SectionTitle'
+import { useCounter } from '../../hooks/useCounter'
 
 const UseRef = (props) => {
+    const [count, inc, dec] = useCounter(20)
     return (
-        <div className="UseCustom">
+        < div className="UseCustom" >
             <PageTitle
                 title="Seu Hook"
                 subtitle="Vamos aprender como criar o nosso próprio Hook!"
             />
-        </div>
+            <SectionTitle title="Exercício #01" />
+            <span className="text">{count}</span>
+            <div>
+                <button className="btn" onClick={_ => inc()}>+1</button>
+                <button className="btn" onClick={_ => dec()}>-1</button>
+            </div>
+
+        </div >
     )
 }
 
